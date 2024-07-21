@@ -278,21 +278,33 @@
             <fieldset>
                 <legend>For Queries</legend> 
                 <label for="name">
-                    <p>Name:</p> <input type="text" minlength="3" maxlength="12" id="name" placeholder="name">
+                    <p>Name : <input type="text" name="Name" id="Hammad" placeholder="John" required></p>
                 </label> 
     
+     
+                <label for="email">
+                    <p>E-Mail : <input type="email" name="Email" id="Hammad" placeholder="Example@gmail.com" required></p> 
+                </label>
+                
                 <label for="phone">
-                    <p>Phone:</p> <input type="tel"  id="phone" placeholder="+92XXXXXXXXXX">
+                    <p>Phone :                     
+                    <select>
+                        <option value="">92</option>
+                        <option value="">40</option>
+                        <option value="">48</option>
+                        <option value="">250</option>
+                        <option value="">966</option>
+                    </select>
+                    <input type="Phone" placeholder="03*****" required id="phone"></p>
                 </label>  
     
-                <label for="email">
-                    <p>E-Mail:</p> <input type="email" id="email" placeholder="E-Mail">
-                </label>  
                 
                 <label for="query">
-                    <textarea id="query" placeholder="Your Query here:" rows="10" cols="50" maxlength="500"> </textarea>
+                    <textarea id="query" rows="10" cols="50" maxlength="500" placeholder="Enter your query"> </textarea>
                 </label>
-                <input type="submit" value="submit">
+                <div>
+                    <input type="submit">
+                </div>
             </fieldset>
         </aside>
         <hr>

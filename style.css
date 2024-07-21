@@ -32,6 +32,9 @@ input {
 span {
     font-family: 'Courier New', Courier, monospace;
 }
+#phone {
+    display: inline;
+}
 
 fieldset {
     margin: 40px ;
@@ -40,6 +43,7 @@ fieldset {
 footer {
     margin-bottom: 50px;
 }
+
 
 
 
