@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Web-Developer's Journey | Asynchronous</title>
+    <link rel="stylesheet" href="./style.css">
+    <link rel="icon" href="./assets/images/logo.png">
+    <style>
+        #asynchronous {
+            color: gray;
+        }
+        #sync, #async {
+            width: auto;
+            height: auto;
+        }
+
+    </style>
+</head>
+<body>
+    <body>
+        <header>
+            <h1>Asynchronous JavaScript</h1>
+            <nav>
+                <a href="./index.html" id="home" target="_parent">Home</a>
+                <a href="#" id="Beginner"> Beginner </a>
+                <a href="#" id="intermediate"> Intermediate </a>
+                <a href="#" id="asynchronous"> Asynchronous </a>
+            </nav>
+        </header>
+        <hr>
+
+        <main>
+            <section>
+                <article>
+                <h2>What is Synchronous Code?</h2>
+                    <p>
+                        When we write a program in JavaScript, it executes line by line. When
+                        a line is completely executed, then and then only does the code move 
+                        forward to execute the next line.Let's look at an example of this:
+                        <pre>
+                            <code>
+                                let greet_one = "Hello" <br>
+                                let greet_two = "World!!!" <br> 
+                                console.log(greet_one) <br>
+                                for(let i=0;i<1000000000;i++){ <br>                                
+                                }                           <br>
+                                console.log(greet_two); <br>
+                            </code>
+                        </pre>
+
+                        Now if you run the above example on your machine you will notice 
+                        that greet_one logs first. Then the program waits for a couple of
+                        seconds and then logs greet_two. This is because the code executes
+                        line by line. This is called synchronous code. This creates lot of 
+                        problems. For example, if a certain piece of code takes 10 seconds 
+                        to execute, the code after it won't be able to execute until it's 
+                        finished, causing delays.
+
+                    </p> 
+                </article>                
+            <img src="./assets/images/sync.png" alt="synchronous JavaScript" id="sync">
+            </section> 
+
+            <section>
+                <article>
+                    <h2>What is Asynchronous Code?</h2>
+                    <p>
+                        With asynchronous code, multiple tasks can execute at the same time 
+                        while tasks in the background finish. This is what we call 
+                        non-blocking code. The execution of other code won't stop while 
+                        an asynchronous task finishes its work.
+                        <br>
+                        <br>
+                        Let's see an example of asynchronous code:
+
+                        <pre>
+                            <code>
+                            let greet_one = "Hello" <br>
+                            let greet_two = "World!!!" <br>
+                            console.log(greet_one)  <br>
+                            setTimeout(function(){  <br>
+                            console.log("Asynchronous");   <br>
+                            }, 10000)   <br>
+                            console.log(greet_two);   <br>
+                            </code>
+                        </pre>
+                </p>
+                </article>
+                <img src="./assets/images/async.png" alt="Asynchronous JavaScript" id="async">
+                <article>
+                    <p>
+                        In the above example, if you run the code on your machine you will 
+                        see greet_one and greet_two logged even there is code in between 
+                        those 2 logs.
+                        <br><br>
+                        Now, setTimeout is asynchronous so it runs in background, allowing 
+                        code after it to execute while it runs. After 10 seconds, 
+                        Asynchronous will print because we set a time of 10 seconds in 
+                        setTimeout to execute it after 10 seconds.
+                        <br><br>
+                        In this tutorial, we will study asynchronous JavaScript in detail 
+                        so you can learn how to write your own asynchronous code. 
+                        I just wanted to give you a taste of async JavaScript using in-built
+                        functions to whet your appetite.
+
+                    </p>
+                </article>
+                <img src="./assets/images/synchronous-vs-asynchronous-js.jpg" alt="async vs sync">
+            </section>
+
+            <section>
+                <article>
+                    <h2>How Promises Work in JavaScript</h2>  
+                    <p>
+                        A promise is placeholder for the future result of an 
+                        asynchronous operation. In simple words, we can say it is a 
+                        container for a future value. <br>
+                        When using promises, we don't need to relay on callbacks which 
+                        helps us avoid callback hell. <br>
+                        Before showing you how promises work through code, I'll explain 
+                        promises using the analogy of a lottery ticket. <br>
+                        Promises are like lottery ticket. When we buy a lottery ticket, 
+                        it says we will get money if our outcome is right. This is like a 
+                        promise. The lottery draw happens asynchronously, and if the 
+                        numbers match, we receive the money which was promised.
+                        <br><br>
+                        Now let's look at a code example:
+                        <pre>
+                            <code>
+                                const request = fetch('https://course-api.com/react-store-products')
+                                console.log(request);
+                            </code>
+                        </pre>
+
+                    </p>
+                </article>
+                <img src="" alt="">
+            </section>
+
+            <section>
+                <article>
+                    <h2></h2>
+                    <p></p>
+                </article>
+                <img src="" alt="">
+            </section>
+
+            <section>
+                <article>
+                    <h2></h2>
+                    <p></p>
+                </article>
+                <img src="" alt="">
+            </section>
+
+
+        </main>
+    
+</body>
+</html>
